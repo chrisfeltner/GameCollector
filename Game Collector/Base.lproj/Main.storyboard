@@ -26,10 +26,13 @@
                     <navigationItem key="navigationItem" id="BsR-a5-q4r">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pLS-18-RM7">
                             <connections>
-                                <segue destination="JeH-QG-xpe" kind="show" id="aPc-wG-9U7"/>
+                                <action selector="onAddPressed:" destination="BYZ-38-t0r" id="nNK-xC-ZHg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="JeH-QG-xpe" kind="show" identifier="addGameSegue" id="Dac-6F-LE3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,14 +92,13 @@
                             </barButtonItem>
                             <barButtonItem title="Photos" id="BVF-06-HpQ">
                                 <connections>
-                                    <action selector="onPhotosPressed:" destination="JeH-QG-xpe" id="hfO-2L-VhR"/>
+                                    <action selector="onPhotosPressed:" destination="JeH-QG-xpe" id="Lss-e4-UfY"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="gameImageView" destination="2Px-eE-T5N" id="OZk-NG-Qpz"/>
-                        <outlet property="onPhotosPressed" destination="BVF-06-HpQ" id="VWB-Zh-BrJ"/>
                         <outlet property="titleTextField" destination="LBb-W8-Hul" id="hTl-YT-pT1"/>
                     </connections>
                 </viewController>
