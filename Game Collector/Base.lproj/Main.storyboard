@@ -72,7 +72,7 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LBb-W8-Hul">
-                                <rect key="frame" x="67.5" y="272" width="240" height="30"/>
+                                <rect key="frame" x="68" y="272" width="240" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -84,12 +84,26 @@
                                     <action selector="onAddPressed:" destination="JeH-QG-xpe" eventType="touchUpInside" id="yHv-mY-csb"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JYR-vl-5y1">
+                                <rect key="frame" x="165" y="391" width="45" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRu-C4-YRA">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                                        <state key="normal" title="Delete"/>
+                                        <connections>
+                                            <action selector="onDeletePressed:" destination="JeH-QG-xpe" eventType="touchUpInside" id="MHC-Sr-xVD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Qpd-2V-V6O" firstAttribute="top" secondItem="LBb-W8-Hul" secondAttribute="bottom" constant="38" id="7uU-p1-tPr"/>
                             <constraint firstItem="2Px-eE-T5N" firstAttribute="top" secondItem="y28-9X-VnC" secondAttribute="bottom" constant="35" id="8LE-LT-tUR"/>
+                            <constraint firstItem="rRu-C4-YRA" firstAttribute="top" secondItem="Qpd-2V-V6O" secondAttribute="bottom" constant="21" id="gKf-2D-6g2"/>
                             <constraint firstItem="2Px-eE-T5N" firstAttribute="centerX" secondItem="3Ex-sF-xZh" secondAttribute="centerX" id="gsz-hA-Sen"/>
+                            <constraint firstItem="JYR-vl-5y1" firstAttribute="centerX" secondItem="3Ex-sF-xZh" secondAttribute="centerX" id="ilG-o8-a4S"/>
                             <constraint firstItem="LBb-W8-Hul" firstAttribute="top" secondItem="2Px-eE-T5N" secondAttribute="bottom" constant="45" id="jlL-Y9-pNR"/>
                             <constraint firstItem="LBb-W8-Hul" firstAttribute="width" secondItem="2Px-eE-T5N" secondAttribute="width" id="qzd-C7-zE8"/>
                             <constraint firstItem="LBb-W8-Hul" firstAttribute="centerX" secondItem="3Ex-sF-xZh" secondAttribute="centerX" id="rbd-Ns-Rve"/>
@@ -112,6 +126,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addUpdateButton" destination="Qpd-2V-V6O" id="jvO-hJ-tYc"/>
+                        <outlet property="deleteButton" destination="rRu-C4-YRA" id="uDB-Tr-td1"/>
                         <outlet property="gameImageView" destination="2Px-eE-T5N" id="OZk-NG-Qpz"/>
                         <outlet property="titleTextField" destination="LBb-W8-Hul" id="hTl-YT-pT1"/>
                     </connections>
